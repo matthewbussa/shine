@@ -39,3 +39,17 @@ postgres createuser: could not connect to database postgres: could not connect t
 
 Solution: brew info postgres
 postgres -D /usr/local/var/postgres
+
+Modify config/database.yml to connect to db
+add the following under default:
+host ​: ​ localhost
+username ​: ​ shine
+password ​: ​ shine
+
+Time to setup our database:
+bundle exec rake db:create
+bundle exec rake db:migrate
+
+Now start the rails server:
+bundle exec rails server
+
