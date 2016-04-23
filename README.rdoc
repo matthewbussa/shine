@@ -53,3 +53,26 @@ bundle exec rake db:migrate
 Now start the rails server:
 bundle exec rails server
 
+Next:
+Add Dashboard Controller
+
+Add Devise
+add gem 'devise' to gemfile
+bundle install
+bundle exec rails generate devise:install
+bundle exec rails generate devise user (this creates a user Active Record Model users)
+
+Set all pages to restricted
+In application_controller.rb add the following line:
+before_action :authenticate_user!
+
+Let's see it work:
+add the following line to index.html.erb in dashboard to see the currently logged in user
+<%= current_user.email%>
+
+Run a db migration
+bundle exec rake db:migrate
+
+Run the server again and localhost:3000 no longer shows dashboard page but asks us to sign up or login.
+
+
