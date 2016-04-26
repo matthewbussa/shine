@@ -75,4 +75,7 @@ bundle exec rake db:migrate
 
 Run the server again and localhost:3000 no longer shows dashboard page but asks us to sign up or login.
 
+Setup Bower:
+npm install -g bower
+
 
