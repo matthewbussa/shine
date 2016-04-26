@@ -92,5 +92,11 @@ Add the following line to app/assets/stylesheets/application.css
  *=require 'bootstrap-sass-official'
 
 
+Extract Devise Views so we can edit them
+bundle exec rails generate devise:views
 
+Add Logout Link to the index page (dashboard/index.html.erb)
+<% = ​ link_to ​" Log Out" ​, destroy_user_session_path, ​ method: :delete ​ ​% >
 
+Apply a Bootstrap "container" (app/views/layouts/application.html.erb)
+<body class="container">...
