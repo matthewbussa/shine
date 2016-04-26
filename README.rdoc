@@ -87,6 +87,10 @@ asset 'bootstrap-sass-official'
 Install Dependencies with Bower
 bundle exec rake bower:install
 
+Configure application.css
+Add the following line to app/assets/stylesheets/application.css
+ *=require 'bootstrap-sass-official'
+
 
 
 
