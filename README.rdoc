@@ -77,5 +77,16 @@ Run the server again and localhost:3000 no longer shows dashboard page but asks 
 
 Setup Bower:
 npm install -g bower
+Add gem 'bower-rails' to gem file and run bundle install
+List out bower rake tasks:
+bundle exec rake -T bower
+
+Create Bowerfile in root directory and add the following asset:
+asset 'bootstrap-sass-official'
+
+Install Dependencies with Bower
+bundle exec rake bower:install
+
+
 
 
