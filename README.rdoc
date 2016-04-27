@@ -103,4 +103,11 @@ Apply a Bootstrap "container" (app/views/layouts/application.html.erb)
 
 -Modified Devise forms to use bootstrap by setting div tags to form-group and elements to class: "form-control"
 
+-Fuzzy Search Section
+-add customer model
+-add faker gem to generate seed data
+
+Generating Seed Data
+-look at db/seeds.rb file
+
 
