@@ -111,3 +111,8 @@ Generating Seed Data
 -look at db/seeds.rb file
 
 
+Build Search UI
+1.  Add Route to config/routes.rb
+      resources :customers, only: [:index]
+2.  Add Controller (app/controllers/customers_controller.rb)
+3.  Add View (app/views/customers/index.html.erb)
