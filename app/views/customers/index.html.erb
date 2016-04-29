@@ -18,9 +18,10 @@
   <header>
     <h1 class="h3">Results</h1>
   </header>
+  <%= render partial: "pager", locals: {keywords: @keywords, page: @page} %>
   <ol class="list-group">
   <% @customers.each do |customer| %>
-    <li calss="list-group-item clearfix">
+    <li class="list-group-item clearfix">
       <h3 class="pull-right">
         <small class="text-uppercase">Joined</small>
         <%= l customer.created_at.to_date %>
@@ -33,4 +34,5 @@
     </li>
     <% end %>
   </ol>
+  <%= render partial: "pager", locals: {keywords: @keywords, page: @page} %>
 </section>
