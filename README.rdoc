@@ -126,3 +126,4 @@ Then run bundle exe rake bower:install
 
 2.  Add it to asset/pipeline (app/assets/javascripts/application.js)
 //= require angular
+
