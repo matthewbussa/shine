@@ -133,3 +133,12 @@ Setting Up Rails Rspec
 2.  RSpec Generators:
     bundle exec rails g rspec:install
 3.  RSpec Configuration - spec/spec_helper.rb
+
+
+
+Setting Up Jasmine
+1.  Add gem 'teaspoon-jasmine'
+2.  bundle exec rails generate teaspoon:install --no-coffee
+3.  Add a sample spec (spec/javascripts/dummy_spec.js)
+4.  Run Javascript tests:
+    bundle exec rake teaspoon
