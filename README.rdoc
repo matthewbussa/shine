@@ -142,3 +142,8 @@ Setting Up Jasmine
 3.  Add a sample spec (spec/javascripts/dummy_spec.js)
 4.  Run Javascript tests:
     bundle exec rake teaspoon
+
+Add Angular Router
+  1.  Add asset 'angular-route' to Bowerfile
+  2.  Add //=require angular-route to application.js
+
