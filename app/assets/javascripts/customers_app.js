@@ -14,13 +14,6 @@ app.config([
     }
 ]);
 
-app.controller("CustomerDetailController", [
-  "$scope","$http","$routeParams",
-  function($scope, $http, $routeParams){
-
-  }
-]);
-
 app.controller("CustomerSearchController", [
   "$scope", "$http","$location",
   function($scope, $http, $location) {
@@ -60,3 +53,20 @@ app.controller("CustomerSearchController", [
 }
 ]);
 
+app.controller("CustomerDetailController", [
+  "$scope","$http","$routeParams",
+  function($scope, $http, $routeParams){
+    var customerId = $routeParams.id;
+    $scope.customer = {};
+
+    $http.get("/customers/" + customerId + ".json"
+      ).then(
+        function(response) {
+          $scope.customer = response.data;
+        },
+        function(response) {
+          alert("There was a problem: " + response.status);
+        }
+    );
+  }
+]);
