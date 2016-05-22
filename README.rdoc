@@ -147,3 +147,5 @@ Add Angular Router
   1.  Add asset 'angular-route' to Bowerfile
   2.  Add //=require angular-route to application.js
 
+Open up DBConsole
+rails dbconsole
