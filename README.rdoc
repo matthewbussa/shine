@@ -149,3 +149,7 @@ Add Angular Router
 
 Open up DBConsole
 rails dbconsole
+
+
+Update Refresh materialized views
+bundle exec rake refresh_materialized_views
