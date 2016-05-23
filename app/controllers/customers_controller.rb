@@ -22,13 +22,6 @@ class CustomersController < ApplicationController
     end
   end
 
-  # def show
-  #   customer = Customer.find(params[:id])
-  #   respond_to do |format|
-  #     format.json {render json: customer}
-  #   end
-  # end
-
   def show
     customer_detail = CustomerDetail.find(params[:id])
     respond_to do |format|

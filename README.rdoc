@@ -159,3 +159,14 @@ rm db/schema.rb
 be rake db:migrate
 RAILS_ENV=test be rake db:drop
 RAILS_ENV=test be rake db:create
+
+
+be rake db:migrate
+RAILS_ENV=development be rake db:drop
+RAILS_ENV=development be rake db:create
+
+RAILS_ENV=test be rake db:drop
+RAILS_ENV=test be rake db:create
+RAILS_ENV=test be rake db:migrate
+RAILS_ENV=test be rake db:seed
+
