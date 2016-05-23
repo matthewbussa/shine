@@ -153,3 +153,9 @@ rails dbconsole
 
 Update Refresh materialized views
 bundle exec rake refresh_materialized_views
+
+Reset Test Database
+rm db/schema.rb
+be rake db:migrate
+RAILS_ENV=test be rake db:drop
+RAILS_ENV=test be rake db:create
