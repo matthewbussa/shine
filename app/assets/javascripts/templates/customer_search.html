@@ -12,6 +12,11 @@
              ng-model="keywords">
   </form>
 </section>
+<aside class="sr-only loading-progress">
+  <span ng-if="loading" class="loading">Loading</span>
+  <span ng-if="!loading" class="not-loading">Done Loading</span>
+</aside>
+
 <section class="search-results" ng-if="customers.length > 0">
   <header>
     <h1 class="h3">Results</h1>
@@ -30,13 +35,7 @@
   <ol class="list-group">
       <li class="list-group-item clearfix"
         ng-repeat="customer in customers">
-        <div class="pull-right">
-          <button class="btn btn-small btn-primary"
-            ng-click="viewDetails(customer)">
-            View Details...
-          </button>
-        </div>
-        <h4><{{ customer.email }}</h4>
+        <customer-summary cust="customer" view-details-function="viewDetails"></customer-summary>
       </li>
   </ol>
 
