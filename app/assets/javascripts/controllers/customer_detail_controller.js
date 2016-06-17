@@ -7,9 +7,6 @@ app.controller("CustomerDetailController", [
                              {"customerId": "@customer_id"},
                              { "save": { "method": "PUT" }});
     $scope.customer = Customer.get({ "customerId": $scope.customerId})
-
-
-
     $scope.customer.billingSameAsShipping = false;
     $scope.$watch('customer.billing_address_id',function() {
       $scope.customer.billingSameAsShipping =
@@ -23,10 +20,19 @@ app.controller("CustomerDetailController", [
           function() {
             $scope.form.$setPristine();
             $scope.form.$setUntouched();
-            alert("Save Successful!");
+            $scope.closeAlert = function(index) {
+              $scope.alert = undefined;
+            },
+            $scope.alert = {
+              type: "success",
+              message: "Customer successfully saved."
+            };
           },
-          function() {
-            alert("Save Failed :(");
+          function(data) {
+            $scope.alert= {
+              type: "danger",
+              message: "Customer couldn't be saved"
+            };
           }
         );
       }
